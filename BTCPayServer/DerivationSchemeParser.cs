@@ -75,8 +75,8 @@ namespace BTCPayServer
                     var data = Network.GetBase58CheckEncoder().DecodeData(parts[i]);
                     if (data.Length < 4)
                         continue;
-                    var prefix = Utils.ToUInt32(data, false);
-                    var standardPrefix = Utils.ToBytes(Network.NetworkType == NetworkType.Mainnet ? 0x0488b21eU : 0x043587cf, false);
+                    var prefix = NBitcoin.Utils.ToUInt32(data, false);
+                    var standardPrefix = NBitcoin.Utils.ToBytes(Network.NetworkType == NetworkType.Mainnet ? 0x0488b21eU : 0x043587cf, false);
                     for (int ii = 0; ii < 4; ii++)
                         data[ii] = standardPrefix[ii];
 

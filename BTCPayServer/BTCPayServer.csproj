@@ -44,10 +44,8 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="2.1.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Filter" Version="1.1.2" />
     <PackageReference Include="Microsoft.NetCore.Analyzers" Version="2.6.0" />
-    <PackageReference Include="NBitcoin" Version="4.1.1.46" />
     <PackageReference Include="NBitpayClient" Version="1.0.0.30" />	  
     <PackageReference Include="DBreeze" Version="1.87.0" />
-    <PackageReference Include="NBXplorer.Client" Version="1.0.2.18" />
     <PackageReference Include="NicolasDorier.CommandLine" Version="1.0.0.2" />
     <PackageReference Include="NicolasDorier.CommandLine.Configuration" Version="1.0.0.3" />
     <PackageReference Include="NicolasDorier.RateLimits" Version="1.0.0.3" />
@@ -118,6 +116,18 @@
 	  <Folder Include="Build\" />
 	  <Folder Include="wwwroot\vendor\clipboard.js\" />
 	  <Folder Include="wwwroot\vendor\highlightjs\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Reference Include="NBitcoin">
+	    <HintPath>..\..\NBitcoin\NBitcoin\bin\Release\netstandard2.0\NBitcoin.dll</HintPath>
+	  </Reference>
+	  <Reference Include="NBXplorer">
+	    <HintPath>..\..\NBXplorer\NBXplorer\bin\Release\netcoreapp2.1\NBXplorer.dll</HintPath>
+	  </Reference>
+	  <Reference Include="NBXplorer.Client">
+	    <HintPath>..\..\NBXplorer\NBXplorer\bin\Release\netcoreapp2.1\NBXplorer.Client.dll</HintPath>
+	  </Reference>
 	</ItemGroup>
 
 	<ItemGroup>

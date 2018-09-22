@@ -1,20 +1,37 @@
 {
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:4907/",
+      "sslPort": 44355
+    }
+  },
   "profiles": {
     "Docker-Regtest": {
-      "commandName": "Project",
+      "commandName": "IISExpress",
+      "commandLineArgs": "--chains ACM",
       "launchBrowser": true,
       "environmentVariables": {
-        "BTCPAY_NETWORK": "regtest",
+        "BTCPAY_NETWORK": "mainnet",
         "BTCPAY_BUNDLEJSCSS": "false",
-        "BTCPAY_LTCEXPLORERURL": "http://127.0.0.1:32838/",
         "BTCPAY_BTCLIGHTNING": "type=charge;server=http://127.0.0.1:54938/;api-token=foiewnccewuify",
         "BTCPAY_BTCEXTERNALLNDGRPC": "type=lnd-grpc;server=https://lnd:lnd@127.0.0.1:53280/;allowinsecure=true",
         "BTCPAY_BTCEXPLORERURL": "http://127.0.0.1:32838/",
         "ASPNETCORE_ENVIRONMENT": "Development",
-        "BTCPAY_CHAINS": "btc,ltc",
-        "BTCPAY_POSTGRES": "User ID=postgres;Host=127.0.0.1;Port=39372;Database=btcpayserver"
+        "BTCPAY_ACMEXPLORERURL": "https://ln-explorer.actinium.org",
+        "BTCPAY_CHAINS": "acm",
+        "BTCPAY_POSTGRES": "User ID=postgres;Host=127.0.0.1;Port=5432;Database=btcpayserver"
       },
       "applicationUrl": "http://127.0.0.1:14142/"
+    },
+    "Default": {
+      "commandName": "IISExpress",
+      "commandLineArgs": "--chains acm",
+      "environmentVariables": {
+        "BTCPAY_NETWORK": "mainnet",
+        "BTCPAY_POSTGRES": "User ID=postgres;Host=127.0.0.1;Port=5432;Database=btcpayserver"
+      }
     }
   }
 }

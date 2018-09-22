@@ -55,6 +55,7 @@ namespace BTCPayServer
             InitFeathercoin();
             InitGroestlcoin();
             InitViacoin();
+            InitActinium();
             //InitUfo();
         }
 
